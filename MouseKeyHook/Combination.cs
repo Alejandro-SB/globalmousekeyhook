@@ -57,7 +57,7 @@ namespace Gma.System.MouseKeyHook
         /// <param name="key"></param>
         public static Combination TriggeredBy(Keys key)
         {
-            return new Combination(key, (IEnumerable<Keys>) new Chord(Enumerable.Empty<Keys>()));
+            return new Combination(key, new Chord(Enumerable.Empty<Keys>()));
         }
 
         /// <summary>
@@ -128,19 +128,19 @@ namespace Gma.System.MouseKeyHook
         }
 
         /// <inheritdoc />
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             if (ReferenceEquals(null, obj)) return false;
             if (ReferenceEquals(this, obj)) return true;
             if (obj.GetType() != GetType()) return false;
-            return Equals((Combination) obj);
+            return Equals((Combination)obj);
         }
 
         /// <inheritdoc />
         public override int GetHashCode()
         {
             return Chord.GetHashCode() ^
-                   (int) TriggerKey;
+                   (int)TriggerKey;
         }
     }
 }

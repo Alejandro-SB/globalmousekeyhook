@@ -2,14 +2,13 @@
 // Copyright (c) 2010-2018 George Mamaladze
 // See license.txt or https://mit-license.org/
 
+using Gma.System.MouseKeyHook;
+using Gma.System.MouseKeyHook.Implementation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reactive.Linq;
 using System.Windows.Forms;
-using Gma.System.MouseKeyHook;
-using Gma.System.MouseKeyHook.Implementation;
-using srx = System.Reactive.Linq;
 
 namespace MouseKeyHook.Rx
 {
